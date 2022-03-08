@@ -8,12 +8,21 @@ if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=sphinx-build
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 set SOURCEDIR=.
 set BUILDDIR=_build
 =======
 set SOURCEDIR=source
 set BUILDDIR=build
 >>>>>>> daa0d62985a9f82016bbffaa83ba490a9fe7ace1
+=======
+set SOURCEDIR=source
+set BUILDDIR=build
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
+>>>>>>> ca41bd288d29f90fb402282eecd70aec7fe862b7
 
 if "%1" == "" goto help
 
