@@ -9,6 +9,10 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=source
 set BUILDDIR=build
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 
 if "%1" == "" goto help
 
