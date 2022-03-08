@@ -12,17 +12,17 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../src/'))
+sys.path.insert(0, os.path.abspath('../../src/'))
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'SDC'
-copyright = '2022, Johana A. Gomez Gomez, Charlotte Remnant, Cheng Luo'
-author = 'Johana A. Gomez Gomez, Charlotte Remnant, Cheng Luo'
+project = 'my great project'
+copyright = '2022, Johana A. Gomez'
+author = 'Johana A. Gomez'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1'
+release = '0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -30,7 +30,9 @@ release = '0.1'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc', 'recommonmark', 'sphinx.ext.napoleon'
+extensions = ['sphinx.ext.autodoc',
+              'myst_parser',
+              'sphinx.ext.napoleon'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -39,7 +41,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = []
 
 
 # -- Options for HTML output -------------------------------------------------
