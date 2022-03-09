@@ -43,7 +43,7 @@ def auto_corr(comp_vc, p_wf, t_wf):
     # autocorrelation fuction
     ac_file = np.zeros([p_wf],dtype=np.complex_)
     for n in range(p_wf):
-        ac_file[n] = np.sum(comp_vc[:, 0] * np.conjugate(comp_vc[:, n]))
+        ac_file[n] = np.correlate(comp_vc[:, 0],(comp_vc[:, n]))
     return ac_file
 
 
