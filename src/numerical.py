@@ -64,7 +64,7 @@ def FFT_wf(ac_file):
     FT1_file = np.fft.fft(ac_file)
     FT1_t = np.fft.fftfreq(len(ac_file))
 
-    FT_file = FT1_file[0:len(ac_file)//2] # Dropping the negative part 
-    FT_t = FT1_t[0:len(ac_file)//2]       # Dropping the negative part
-    
+    FT_file = FT1_file[0 : len(ac_file) // 2]  # Dropping the negative part
+    FT_t = FT1_t[0 : len(ac_file) // 2]  # Dropping the negative part
+
     return FT_file, FT_t
