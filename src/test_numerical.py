@@ -1,8 +1,9 @@
-import pytest
+# import pytest
 import numerical
 import numpy as np
 
 my_wf = np.loadtxt('../data/nstate_i.t', dtype=float, skiprows=1)
+
 
 @pytest.mark.test1
 def test_cmplx_array():

@@ -5,7 +5,7 @@ def cmplx_array(file):
     """Function to create an array of complex dtype from numpy.float array\
 
     Args:
-        wf_n(numpy array, float): Wave function over time
+        file (numpy array, float): Wave function over time
 
     Returns:
         numpy array, complex: The wave function complex over time.
@@ -13,7 +13,7 @@ def cmplx_array(file):
     """
 
     # loading file as a numpy array dtype=float
-    arr_fl = np.loadtxt("../data/nstate_i.t", dtype=float, skiprows=1)
+    arr_fl = np.loadtxt(file, dtype=float, skiprows=1)
 
     # storing time column as a vector and droping from arr_fl
     time = arr_fl[:, 0]
@@ -25,7 +25,7 @@ def cmplx_array(file):
     arr_cmplx = 1j * im_arr
     arr_cmplx += r_arr
 
-    return arr_cmplx, time
+    return {"arr_cmplx": arr_cmplx, "time": time}  # returns dictionary
 
 
 def auto_corr(arr_cmplx, time):
@@ -64,7 +64,7 @@ def FFT_wf(ac_file):
     FT1_file = np.fft.fft(ac_file)
     FT1_t = np.fft.fftfreq(len(ac_file))
 
-    FT_file = FT1_file[0:len(ac_file)//2] # Dropping the negative part 
-    FT_t = FT1_t[0:len(ac_file)//2]       # Dropping the negative part
-    
+    FT_file = FT1_file[0 : len(ac_file) // 2]  # Dropping the negative part
+    FT_t = FT1_t[0 : len(ac_file) // 2]  # Dropping the negative part
+
     return FT_file, FT_t
