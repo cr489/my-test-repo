@@ -37,7 +37,7 @@ jobs:
       run: flake8
     - name: Run unittest
       run: |
-        cd /my-test-repo/src/
+        cd src/
         python -m unittest
     - name: Build sphix documentation
       run: |
