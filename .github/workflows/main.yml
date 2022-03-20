@@ -41,5 +41,5 @@ jobs:
         python -m unittest
     - name: Build sphix documentation
       run: |
-        cd doc
+        cd docs
         make html
